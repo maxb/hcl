@@ -19,7 +19,10 @@ func main() {
 		"Write reformatted content back to files in place")
 	flag.BoolVar(&options.Diff, "diff", false,
 		"Display diff of formatting changes")
-	flag.StringVar(&extensionsCSV, "extensions", "hcl", "File extensions (comma separated) to operate on when processing a directory")
+	flag.IntVar(&options.SpacesWidth, "indent", 2,
+		"Number of spaces per indent level")
+	flag.StringVar(&extensionsCSV, "extensions", "hcl",
+		"File extensions (comma separated) to operate on when processing a directory")
 
 	extensions := strings.Split(extensionsCSV, ",")
 

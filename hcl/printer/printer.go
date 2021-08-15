@@ -49,14 +49,14 @@ func Fprint(output io.Writer, node ast.Node) error {
 }
 
 // Format formats src HCL and returns the result.
-func Format(src []byte) ([]byte, error) {
+func Format(src []byte, config Config) ([]byte, error) {
 	node, err := parser.Parse(src)
 	if err != nil {
 		return nil, err
 	}
 
 	var buf bytes.Buffer
-	if err := DefaultConfig.Fprint(&buf, node); err != nil {
+	if err := config.Fprint(&buf, node); err != nil {
 		return nil, err
 	}
 

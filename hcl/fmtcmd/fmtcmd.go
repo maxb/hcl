@@ -23,9 +23,10 @@ var (
 )
 
 type Options struct {
-	List  bool // list files whose formatting differs
-	Write bool // write result to (source) file instead of stdout
-	Diff  bool // display diffs of formatting changes
+	List        bool // list files whose formatting differs
+	Write       bool // write result to (source) file instead of stdout
+	Diff        bool // display diffs of formatting changes
+	SpacesWidth int  // number of spaces per indent level
 }
 
 func isValidFile(f os.FileInfo, extensions []string) bool {
@@ -56,7 +57,9 @@ func processFile(filename string, in io.Reader, out io.Writer, stdin bool, opts 
 		return err
 	}
 
-	res, err := printer.Format(src)
+	res, err := printer.Format(src, printer.Config{
+		SpacesWidth: opts.SpacesWidth,
+	})
 	if err != nil {
 		return fmt.Errorf("In %s: %s", filename, err)
 	}
