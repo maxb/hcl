@@ -6,8 +6,8 @@ import (
 	"io"
 	"text/tabwriter"
 
-	"github.com/hashicorp/hcl/hcl/ast"
-	"github.com/hashicorp/hcl/hcl/parser"
+	"github.com/maxb/hcl/hcl/ast"
+	"github.com/maxb/hcl/hcl/parser"
 )
 
 var DefaultConfig = Config{

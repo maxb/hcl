@@ -1,7 +1,7 @@
 package hcl
 
 import (
-	"github.com/hashicorp/hcl/hcl/token"
+	"github.com/maxb/hcl/hcl/token"
 	"io/ioutil"
 	"path/filepath"
 	"reflect"
@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/hashicorp/hcl/hcl/ast"
+	"github.com/maxb/hcl/hcl/ast"
 )
 
 func TestDecode_interface(t *testing.T) {

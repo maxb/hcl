@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/hashicorp/hcl/hcl/ast"
-	"github.com/hashicorp/hcl/hcl/scanner"
-	"github.com/hashicorp/hcl/hcl/token"
+	"github.com/maxb/hcl/hcl/ast"
+	"github.com/maxb/hcl/hcl/scanner"
+	"github.com/maxb/hcl/hcl/token"
 )
 
 type Parser struct {

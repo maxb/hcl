@@ -1,4 +1,4 @@
-module github.com/hashicorp/hcl
+module github.com/maxb/hcl
 
 go 1.15
 

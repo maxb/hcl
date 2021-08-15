@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/hashicorp/hcl/hcl/fmtcmd"
+	"github.com/maxb/hcl/hcl/fmtcmd"
 )
 
 func main() {
